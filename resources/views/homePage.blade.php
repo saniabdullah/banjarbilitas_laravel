@@ -1,8 +1,7 @@
 @extends('layouts/appLayout')
 
 @section('content')
-    <div class="App">
-        <div class="main-container">
+
             <!-- banner -->
             <div class="banner-container bg-slate-100">
                 <div class='banner-text-center'>
@@ -20,7 +19,7 @@
             <div class='app__work-portfolio pt-16'>
                 <h2 style="color: #cc4a1f; text-align: center; font-size: 28px;">Lowongan Terbaru</h2> 
                 <div class='app__profile-item product-card'>
-                    <a href=''>
+                    <a href='/detail'>
                         <div class="slide-container">
                             <div class="wrapper">
                                 <div class="clash-card barbarian">
@@ -113,9 +112,5 @@
                     </div>
                 </div>
             </div>
-
-
-        </div>
-    </div>
 
 @endsection

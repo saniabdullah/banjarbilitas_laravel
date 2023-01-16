@@ -86,8 +86,13 @@
                         >DETAIL LOWONGAN</label>
                         <div class="flex flex-col items-start">
                             <input 
-                                type="text" 
-                                required
+                                type="text"
+                                placeholder="1."
+                                class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  
+                            />
+                            <input 
+                                type="text"
+                                placeholder="2."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  
                             />
                         </div>
@@ -98,8 +103,13 @@
                         >KRETERIA UMUM</label>
                         <div class="flex flex-col items-start">
                             <input 
-                                type="text" 
-                                required
+                                type="text"
+                                placeholder="1."
+                                class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
+                            />
+                            <input 
+                                type="text"
+                                placeholder="2."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
                             />
                         </div>
@@ -108,8 +118,13 @@
                         >KRETERIA KHUSUS</label>
                         <div class="flex flex-col items-start">
                             <input 
-                                type="text" 
-                                required
+                                type="text"
+                                placeholder="1."
+                                class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
+                            />
+                            <input 
+                                type="text"
+                                placeholder="2."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
                             />
                         </div>
@@ -118,8 +133,13 @@
                         >CATATAN LAIN</label>
                         <div class="flex flex-col items-start">
                             <input 
-                                type="text" 
-                                required
+                                type="text"
+                                placeholder="1."
+                                class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
+                            />
+                            <input 
+                                type="text"
+                                placeholder="2."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
                             />
                         </div>

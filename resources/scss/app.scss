@@ -263,11 +263,22 @@ body, * {
         flex-direction: column;
 
         button {
-            width: 40%;
-            color: white;
-            box-shadow: -1px 15px 30px -12px black;
-            background-color: #cc4a1f;
-        }
+          width: 40%;
+          padding: 1rem 2rem;
+          border-radius: 10px;
+          border: none;
+          background-color: #cc4a1f;
+          font-weight: bold;
+          color: white;
+          outline: none;
+          margin: 2rem 0 0 0;
+          transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          cursor: pointer;
+      
+          &:hover {
+            background-color: #8a361a;
+          }
+      }
         @media (max-width: 600px){
             
             // min-height: 100vh;
@@ -275,12 +286,23 @@ body, * {
     }
 
     .detail-banner-right{
-        button {
-            width: 90%;
-            color: white;
-            box-shadow: -1px 15px 30px -12px black;
-            background-color: #cc4a1f;
+      button {
+        width: 90%;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        border: none;
+        background-color: #cc4a1f;
+        font-weight: bold;
+        color: white;
+        outline: none;
+        margin: 2rem 0 0 0;
+        transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        cursor: pointer;
+    
+        &:hover {
+          background-color: #8a361a;
         }
+    }
         @media (max-width: 600px){
             margin-top: 30px;
             // min-height: 300px;

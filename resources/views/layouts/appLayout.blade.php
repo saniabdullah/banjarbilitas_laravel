@@ -17,16 +17,20 @@
 
     </head>
     <body>
-        @yield('content')
 
-        
+    <div class="App">
+        <div class="main-container">
+        <!-- content -->
+        @yield('content')
+        </div>
         <!-- footer -->
         <div class='footer-container'>
-        <p>2022 Banjarbilitas All rights reserverd</p>
-        <p class="icons">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-        </p>
+            <p>2022 Banjarbilitas All rights reserverd</p>
+            <p class="icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </p>
         </div>
+    </div>
     </body>
 </html>

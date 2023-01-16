@@ -20,5 +20,6 @@ $controller_path = 'App\Http\Controllers';
 // });
 
 Route::get('/', $controller_path . '\HomeController@index')->name('pages-home');
+Route::get('/detail', $controller_path . '\HomeController@detail')->name('detail-page');
 Route::get('/admin', $controller_path . '\AdminController@index')->name('admin-page');
 
