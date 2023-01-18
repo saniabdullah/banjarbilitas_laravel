@@ -4,7 +4,8 @@
 <div class="flex flex-col items-center pt-6 sm:justify-center sm:pt-0 margin__form_admin">
         <div class="create pb-8 my-32 w-full px-6 py-4 bg-gray-50 shadow-md sm:rounded-lg">
             <h2>Tambah Lowongan</h2>
-            <form>
+            <form action="{{ route('admin-page-add') }}" method="post">
+                @csrf
                 <div class='form__gawian__admin'>
                     <div class='gawian__kategori'>
                         <label
@@ -13,7 +14,7 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="file" 
-                                required
+                                name="fotoPerusahaan"
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
                             />
                         </div>
@@ -23,7 +24,7 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text" 
-                                required
+                                name="namaPerusahaan"
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
                             />
                         </div>
@@ -33,7 +34,7 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text" 
-                                required
+                                name="namaPekerjaan"
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  
                             />
                         </div>
@@ -43,7 +44,7 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text" 
-                                required
+                                name="jenisDisabilitas"
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
                             />
                         </div>
@@ -52,6 +53,7 @@
                         >LOKASI PERUSAHAAN</label>
                         <div class="flex flex-col items-start">
                             <select
+                            name="lokasiPerusahaan"
                             class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                             >
                                 <option value="#">Pilih Lokasi Perusahaan</option>
@@ -77,7 +79,7 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text" 
-                                required
+                                name="deadlineDate"
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" 
                             />
                         </div>
@@ -87,11 +89,13 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text"
+                                name="detailLowongan[]"
                                 placeholder="1."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  
                             />
                             <input 
                                 type="text"
+                                name="detailLowongan[]"
                                 placeholder="2."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  
                             />
@@ -104,11 +108,13 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text"
+                                name="kreteriaUmum[]"
                                 placeholder="1."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
                             />
                             <input 
                                 type="text"
+                                name="kreteriaUmum[]"
                                 placeholder="2."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
                             />
@@ -119,11 +125,13 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text"
+                                name="kreteriaKhusus[]"
                                 placeholder="1."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
                             />
                             <input 
                                 type="text"
+                                name="kreteriaKhusus[]"
                                 placeholder="2."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
                             />
@@ -134,11 +142,13 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text"
+                                name="catatanLain[]"
                                 placeholder="1."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
                             />
                             <input 
                                 type="text"
+                                name="catatanLain[]"
                                 placeholder="2."
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"   
                             />
@@ -149,7 +159,7 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text" 
-                                required
+                                name="tentangPerusahaan"
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  
                             />
                         </div>
@@ -158,6 +168,7 @@
                         >KATEGORI PEKERJAAN</label>
                         <div class="flex flex-col items-start">
                             <select
+                            name="kategoriPekerjaan"
                             class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                             >
                                 <option value="#">Pilih Kategori Pekerjaan</option>
@@ -197,13 +208,13 @@
                         <div class="flex flex-col items-start">
                             <input 
                                 type="text" 
-                                required
+                                name="spesifikasiPekerjaan"
                                 class="block w-full mt-1 border-slate-500 px-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"                                
                             />
                         </div>
                     </div>
                 </div>
-                <button>TAMBAHKAN</button>
+                <button type="submit">TAMBAHKAN</button>
             </form>
         </div>
     </div>

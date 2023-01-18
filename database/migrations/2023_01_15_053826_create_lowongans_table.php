@@ -15,6 +15,19 @@ return new class extends Migration
     {
         Schema::create('lowongans', function (Blueprint $table) {
             $table->id();
+            $table->string('fotoPerusahaan')->nullable();
+            $table->string('namaPerusahaan')->nullable();
+            $table->string('namaPekerjaan')->nullable();
+            $table->string('jenisDisabilitas')->nullable();
+            $table->string('lokasiPerusahaan')->nullable();
+            $table->string('deadlineDate')->nullable();
+            $table->json('detailLowongan')->nullable();
+            $table->json('kreteriaUmum')->nullable();
+            $table->json('kreteriaKhusus')->nullable();
+            $table->json('catatanLain')->nullable();
+            $table->string('tentangPerusahaan')->nullable();
+            $table->string('kategoriPekerjaan')->nullable();
+            $table->string('spesifikasiPekerjaan')->nullable();
             $table->timestamps();
         });
     }

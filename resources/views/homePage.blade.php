@@ -8,7 +8,7 @@
                     <h1>Cari Gawian Sesuai Keunikan Pian</h1>
                     <h3>Apapun tentang pian, selalu ada peluang di sini.</h3>
                     <div class='button-search'>
-                    <a href='/cari-gawian'>
+                    <a href='/cari-lowongan'>
                         <button type="button" class="button-red">Cari Gawian</button>
                     </a>
                     </div>
