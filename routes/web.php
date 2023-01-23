@@ -26,6 +26,7 @@ Route::get('/detail', $controller_path . '\HomeController@detail')->name('detail
 // admin
 Route::get('/admin', $controller_path . '\AdminController@index')->name('admin-page');
 Route::post('/admin/add', $controller_path . '\AdminController@add_lowongan')->name('admin-page-add');
+Route::delete('admin/{id}', $controller_path . '\AdminController@delete_lowongan')->name('delete-lowongan');
 
 // cari lowongan
 Route::get('/cari-lowongan', $controller_path . '\CariLowonganController@index')->name('cari-lowongan-page');

@@ -8,7 +8,14 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index(){
-        return view('adminPage');
+        try {
+            $lowongans = Lowongan::all();
+            $data['lowongans'] = $lowongans;
+
+            return view('adminPage', $data);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     public function add_lowongan(Request $request){
@@ -50,5 +57,11 @@ class AdminController extends Controller
             return redirect()->route('pages-home')->with('error', 'Error adding data: ' . $th->getMessage());
         }
         
+    }
+
+    public function delete_lowongan($id)
+    {
+        Lowongan::destroy($id);
+        return redirect()->route('admin-page');
     }
 }
