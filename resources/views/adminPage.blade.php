@@ -6,7 +6,7 @@
     <div class="flex flex-col items-center pt-6 sm:justify-center sm:pt-0 margin__form_admin">
         <div class="create pb-8 my-32 w-full px-6 py-4 bg-gray-50 shadow-md sm:rounded-lg">
             <h2>Tambah Lowongan</h2>
-            <form action="{{ route('admin-page-add') }}" method="post">
+            <form action="{{ route('admin-page-add') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class='form__gawian__admin'>
                     <div class='gawian__kategori'>
@@ -245,7 +245,9 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach ($lowongans as $lowongan)
+                @foreach ($lowongans as $lowongan)
+
+                <img src="{{ asset('storage/' . $lowongan->fotoPerusahaan) }}" alt="">
                 <!-- mengubah json ke array -->
                 @php
                     $details = $lowongan->detailLowongan;

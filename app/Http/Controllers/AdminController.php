@@ -19,16 +19,16 @@ class AdminController extends Controller
     }
 
     public function add_lowongan(Request $request){
-        $fotoPerusahaan = $request->fotoPerusahaan;
+        $fotoPerusahaan = $request->file('fotoPerusahaan')->store('post-images');
         $namaPerusahaan = $request->namaPerusahaan;
         $namaPekerjaan = $request->namaPekerjaan;
         $jenisDisabilitas = $request->jenisDisabilitas;
         $lokasiPerusahaan = $request->lokasiPerusahaan;
         $deadlineDate = $request->deadlineDate;
-        $detailLowongan = $request->detailLowongan;
-        $kreteriaUmum = $request->kreteriaUmum;
-        $kreteriaKhusus = $request->kreteriaKhusus;
-        $catatanLain = $request->catatanLain;
+        $detailLowongan = json_encode($request->detailLowongan);
+        $kreteriaUmum = json_encode($request->kreteriaUmum);
+        $kreteriaKhusus = json_encode($request->kreteriaKhusus);
+        $catatanLain = json_encode($request->catatanLain);
         $tentangPerusahaan = $request->tentangPerusahaan;
         $kategoriPekerjaan = $request->kategoriPekerjaan;
         $spesifikasiPekerjaan = $request->spesifikasiPekerjaan;
@@ -40,10 +40,10 @@ class AdminController extends Controller
             'jenisDisabilitas' => $jenisDisabilitas,
             'lokasiPerusahaan' => $lokasiPerusahaan,
             'deadlineDate' => $deadlineDate,
-            'detailLowongan' => json_encode($detailLowongan),
-            'kreteriaUmum' => json_encode($kreteriaUmum),
-            'kreteriaKhusus' => json_encode($kreteriaKhusus),
-            'catatanLain' => json_encode($catatanLain),
+            'detailLowongan' => $detailLowongan,
+            'kreteriaUmum' => $kreteriaUmum,
+            'kreteriaKhusus' => $kreteriaKhusus,
+            'catatanLain' => $catatanLain,
             'tentangPerusahaan' => $tentangPerusahaan,
             'kategoriPekerjaan' => $kategoriPekerjaan,
             'spesifikasiPekerjaan' => $spesifikasiPekerjaan
