@@ -21,7 +21,7 @@ $controller_path = 'App\Http\Controllers';
 
 // home dan detail
 Route::get('/', $controller_path . '\HomeController@index')->name('pages-home');
-Route::get('/detail', $controller_path . '\HomeController@detail')->name('detail-page');
+Route::get('/detail/{id}', $controller_path . '\HomeController@detail')->name('detail-page');
 
 // admin
 Route::get('/admin', $controller_path . '\AdminController@index')->name('admin-page');

@@ -1,7 +1,7 @@
-@fa-font-path: "~@fortawasome/fontawasome-free/webfonts";
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/brands';
-@import '@fortawesome/fontawesome-free/scss/solid';
+// @fa-font-path: "~@fortawasome/fontawasome-free/webfonts";
+// @import '@fortawesome/fontawesome-free/scss/fontawesome';
+// @import '@fortawesome/fontawesome-free/scss/brands';
+// @import '@fortawesome/fontawesome-free/scss/solid';
 
 // App
 html,
@@ -353,9 +353,9 @@ body, * {
         font-size: 30px;
         display: flex;
         justify-content: center;
-        gap: 30px;
+        gap: 100px;
 
-        svg {
+        i {
             width: 35px;
             height: 35px;
         }
@@ -882,7 +882,6 @@ $barbarian: #EC9B3B;
 
 .wrapper {
   padding-top: 40px;
-  padding-bottom: 40px;
   
   &:focus {
     outline: 0;
@@ -1259,3 +1258,27 @@ $border-radius-size: 14px;
 .banner-container{
   color: #d94514;
 }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* Pagination link */
+.page-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+
+
+

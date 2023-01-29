@@ -247,7 +247,7 @@
             <tbody>
                 @foreach ($lowongans as $lowongan)
 
-                <img src="{{ asset('storage/' . $lowongan->fotoPerusahaan) }}" alt="">
+                <!-- <img src="{{ asset('storage/' . $lowongan->fotoPerusahaan) }}" alt=""> -->
                 <!-- mengubah json ke array -->
                 @php
                     $details = $lowongan->detailLowongan;
@@ -299,7 +299,7 @@
                             <form action="{{ route('delete-lowongan', $lowongan->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-sm btn-icon delete-record" type="submit"><i class="bx bx-trash">delete</i></button>
+                                <button class="btn btn-sm btn-icon delete-record" type="submit"><i class="bi bi-trash3 text-danger"></i></button>
                             </form>
                         </div>
                     </td>

@@ -18,42 +18,48 @@
             <!-- lowongan -->
             <div class='app__work-portfolio pt-16'>
                 <h2 style="color: #cc4a1f; text-align: center; font-size: 28px;">Lowongan Terbaru</h2> 
-                <div class='app__profile-item product-card'>
-                    <a href='/detail'>
-                        <div class="slide-container">
-                            <div class="wrapper">
-                                <div class="clash-card barbarian">
-                                    <div class="clash-card__image clash-card__image--barbarian overflow-hidden	bg-cover">
-                                        <img src="{{ asset('images/tip1.jpeg') }}" alt="barbarian" />
+                @foreach ($lowongans as $lowongan)
+                    <div class='app__profile-item product-card'>
+                        <a href="{{ route('detail-page', $lowongan->id) }}">
+                            <div class="slide-container">
+                                <div class="wrapper">
+                                    <div class="clash-card barbarian">
+                                        <div class="clash-card__image clash-card__image--barbarian overflow-hidden	bg-cover">
+                                            <img src="{{ asset('storage/' . $lowongan->fotoPerusahaan) }}" alt="barbarian" />
+                                        </div>
+                                    <div class="clash-card__unit-description" style="color: black; font-size: 20px; text-align: left; font-weight: normal;">
+                                        <i class="bi bi-buildings pr-5" style="width: 35px; height:30px;"></i>
+                                        {{ $lowongan->namaPerusahaan }}
                                     </div>
-                                <div class="clash-card__unit-description" style="color: black; font-size: 20px; text-align: left; font-weight: normal;">
-                                    HIT
-                                </div>
-                                <div class="clash-card__unit-description" style="color: #cc4a1f; font-size: 28px; text-align: left; font-weight: bold;">
-                                    Programmer
-                                </div>
-                                <hr />
-                                <div class="clash-card__unit-description" style="color: black; text-align: left; display: flex;">
-                                    <MdApartment /> 
-                                    IT dan Telekomunikasi
-                                </div>
-                                <div class="clash-card__unit-description" style="color: #cc4a1f; text-align: left; display: flex;">
-                                    <GiHumanTarget /> 
-                                    non
-                                </div>
-                                <div class="clash-card__unit-description" style="color: black; text-align: left; display: flex;">
-                                    <IoLocationSharp /> 
-                                    BanjarBaru
-                                </div>
+                                    <div class="clash-card__unit-description" style="color: #cc4a1f; font-size: 28px; text-align: left; font-weight: bold;">
+                                        {{ $lowongan->namaPekerjaan }}
+                                    </div>
+                                    <hr />
+                                    <div class="clash-card__unit-description" style="color: black; text-align: left; display: flex;">
+                                        <i class="bi bi-building" style="width: 35px; height:30px;"></i>
+                                        {{ $lowongan->kategoriPekerjaan }}
+                                    </div>
+                                    <div class="clash-card__unit-description" style="color: #cc4a1f; text-align: left; display: flex;">
+                                        <i class="bi bi-person" style="width: 35px; height:30px;"></i>
+                                        {{ $lowongan->jenisDisabilitas }}
+                                    </div>
+                                    <div class="clash-card__unit-description" style="color: black; text-align: left; display: flex;">
+                                        <i class="bi bi-geo-alt" style="width: 35px; height:30px;"></i>
+                                        {{ $lowongan->lokasiPerusahaan }}
+                                    </div>
 
-                                <div class="clash-card__unit-stats clash-card__unit-stats--barbarian">
-                                    <div>21 Januari 2023</div>
-                                </div>
-                                </div>
-                            </div> 
-                        </div>    
-                    </a>
-                </div>
+                                    <div class="clash-card__unit-stats clash-card__unit-stats--barbarian">
+                                        <div>{{ $lowongan->deadlineDate }}</div>
+                                    </div>
+                                    </div>
+                                </div> 
+                            </div>    
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+            <div class="mx-auto d-flex pagination pb-5 pt-3">
+                {{ $lowongans->links() }}
             </div>
             <!-- profil -->
             <article class='profile'>
@@ -66,9 +72,9 @@
                     <h1>Buat <span>PROFIL KERJABILITAS</span> dan raih peluangmu!</h1>      
                 </div>  
                 <div>
-                    <div class='profile__p pb-8'>Selalu di depan dengan peluang kerja baru yang dikirim lewat email setiap hari</div>
-                    <div class='profile__p'>Melamar cepat dengan aplikasi lamaran yang sudah di lengkapi lebih dulu</div>
-                    <div class='profile__p'>Mudah di hubungi oleh penyedia kerja dan peluang yang sesuai kualifikasi kamu</div>
+                    <div class='profile__p pb-8'><i class="bi bi-envelope-at pr-4" style="width: 35px; height:35px;"></i>Selalu di depan dengan peluang kerja baru yang dikirim lewat email setiap hari</div>
+                    <div class='profile__p'><i class="bi bi-send pr-4" style="width: 35px; height:35px;"></i>Melamar cepat dengan aplikasi lamaran yang sudah di lengkapi lebih dulu</div>
+                    <div class='profile__p'><i class="bi bi-telephone pr-4" style="width: 35px; height:35px;"></i>Mudah di hubungi oleh penyedia kerja dan peluang yang sesuai kualifikasi kamu</div>
                     <div class='button-search lg:pt-12'>
                     <button type="button" >Ayo!</button>
                     </div>
