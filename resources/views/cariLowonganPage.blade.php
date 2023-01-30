@@ -93,7 +93,7 @@
 </div>
 <!-- lowongan -->
 <div class='app__work-portfolio pt-16'>
-    <h2 style="color: #cc4a1f; text-align: center; font-size: 28px;">Lowongan Terbaru</h2> 
+    <h2 style="color: #cc4a1f; text-align: center; font-size: 28px;">Lowongan</h2> 
     @foreach ($lowongans as $lowongan)
     <div class='app__profile-item product-card'>
         <a href="{{ route('detail-page', $lowongan->id) }}">
@@ -133,6 +133,10 @@
         </a>
     </div>
     @endforeach
+
+    @if(count($lowongans) <= 0)
+        <div class='text-center text-3xl py-5'>Maap tidak ada lowongan</div>
+    @endif
 </div>
 
 @endsection

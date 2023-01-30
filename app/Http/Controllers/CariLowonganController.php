@@ -8,20 +8,28 @@ use Illuminate\Http\Request;
 class CariLowonganController extends Controller
 {
     public function index(){
+
+        $kategoriPekerjaan = request('kategoriPekerjaan');
+        $lokasiPerusahaan = request('lokasiPerusahaan');
+        $namaPekerjaan = request('namaPekerjaan');
+        $namaPerusahaan = request('namaPerusahaan');
+
         try {            
             $lowongans = Lowongan::latest();
             
-            if(request('kategoriPekerjaan') && request('namaPekerjaan') && request('lokasiPerusahaan') && request('namaPerusahaan')){
-                $lowongans->where('kategoriPekerjaan', 'like', '%' . request('kategoriPekerjaan') . '%')
-                        ->where('lokasiPerusahaan', 'like', '%' . request('lokasiPerusahaan') . '%');
-            } else if (request('kategoriPekerjaan')) {
-                $lowongans->where('kategoriPekerjaan', 'like', '%' . request('kategoriPekerjaan') . '%');
-            } else if (request('lokasiPerusahaan') && request('kategoriPekerjaan') == '') {
-                $lowongans->where('lokasiPerusahaan', 'like', '%' . request('lokasiPerusahaan') . '%');
-            } else if (request('namaPekerjaan')) {
-                $lowongans->where('namaPekerjaan', 'like', '%' . request('namaPekerjaan') . '%');
-            } else if (request('namaPerusahaan')) {
-                $lowongans->where('namaPerusahaan', 'like', '%' . request('namaPerusahaan') . '%');
+            if(!empty($kategoriPekerjaan) && !empty($lokasiPerusahaan) && !empty($namaPekerjaan)  && !empty($namaPerusahaan)){
+                $lowongans->where('kategoriPekerjaan', 'like', '%' . $kategoriPekerjaan . '%')
+                          ->where('lokasiPerusahaan', 'like', '%' . $lokasiPerusahaan . '%')
+                          ->where('namaPekerjaan', 'like', '%' . $namaPekerjaan . '%')
+                          ->where('namaPerusahaan', 'like', '%' . $namaPerusahaan . '%');
+            } else if (!empty($kategoriPekerjaan)) {
+                $lowongans->where('kategoriPekerjaan', 'like', '%' . $kategoriPekerjaan . '%');
+            } else if (!empty($lokasiPerusahaan)) {
+                $lowongans->where('lokasiPerusahaan', 'like', '%' . $lokasiPerusahaan . '%');
+            } else if (!empty($namaPekerjaan)) {
+                $lowongans->where('namaPekerjaan', 'like', '%' . $namaPekerjaan . '%');
+            } else if (!empty($namaPerusahaan)) {
+                $lowongans->where('namaPerusahaan', 'like', '%' . $namaPerusahaan . '%');
             }
 
             return view('cariLowonganPage', ["lowongans" => $lowongans->get()]);
