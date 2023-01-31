@@ -21,6 +21,21 @@
     </head>
     <body>
 
+    <!-- navbar -->
+    <nav class="app__navbar m-0 bg-slate-100">
+        <div class="app__navbar-logo">
+            <a href="/">
+            <!-- <img src={images.banjarbilitas} alt="logo" /> -->
+            </a>
+        </div>
+        <ul class="app__navbar-links">
+            <li><a href="/cari-gawian">Cari Lowongan</a></li>
+            <li><a href="#tips">Tips Karir</a></li>
+            <li class='rounded-full button__masuk' data-bs-toggle="modal" data-bs-target="#addModal">Masuk</li>
+            <li class='rounded-full button__daftar'><a href="/signup">Daftar</a></li>
+        </ul>
+    </nav>
+
     <div class="App">
         <div class="main-container">
         <!-- content -->
@@ -33,6 +48,61 @@
                 <!-- <i class="bi bi-facebook"></i> -->
                 <i class="bi bi-instagram"></i>
             </p>
+        </div>
+    </div>
+
+    <!-- modal login -->
+    <div class="modal fade" id="addModal" data-bs-backdrop="static" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+        <form class="modal-content" action=""  method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="modal-header">
+            <h5 class="modal-title" id="backDropModalTitle">Add Requsition</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <div class="row g-2">
+                <div class="col mb-0">
+                <label for="plant" class="form-label">Plant</label>
+                <input type="text" id="plant" class="form-control" placeholder="plant" name="plant">
+                </div>
+                <div class="col mb-0">
+                <label for="pr_number" class="form-label">pr number</label>
+                <input type="text" id="pr_number" class="form-control" placeholder="12345" name="pr_number">
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="col mb-0">
+                <label for="pr_sap" class="form-label">pr sap</label>
+                <input type="text" id="pr_sap" class="form-control" placeholder="12345" name="pr_sap">
+                </div>
+                <div class="col mb-0">
+                <label for="request_date" class="form-label">request date</label>
+                <input type="date" id="request_date" class="form-control" placeholder="DD / MM / YY" name="request_date">
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="col mb-0">
+                <label for="pr_type" class="form-label">pr type</label>
+                <input type="text" id="pr_type" class="form-control" placeholder="12345" name="pr_type">
+                </div>
+                <div class="col mb-0">
+                <label for="header_text" class="form-label">header text</label>
+                <input type="text" id="header_text" class="form-control" placeholder="request" name="header_text">
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="col mb-0">
+                <label for="item" class="form-label">item</label>
+                <input type="text" id="item" class="form-control" placeholder="hp" name="item">
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </form>
         </div>
     </div>
     </body>

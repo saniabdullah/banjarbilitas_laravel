@@ -32,7 +32,7 @@ class CariLowonganController extends Controller
                 $lowongans->where('namaPerusahaan', 'like', '%' . $namaPerusahaan . '%');
             }
 
-            return view('cariLowonganPage', ["lowongans" => $lowongans->get()]);
+            return view('cariLowonganPage', ["lowongans" => $lowongans->paginate(5)]);
         } catch (\Throwable $th) {
             throw $th;
         }

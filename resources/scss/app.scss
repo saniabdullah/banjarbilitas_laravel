@@ -383,14 +383,13 @@ body, * {
     max-height: max-content;
   
     padding: 1rem 1rem;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background: rgba(212, 201, 201, 0.5);
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 2;
-    // margin-bottom: 40px;
   }
 
   .button__masuk{
@@ -593,7 +592,7 @@ body, * {
 // Banner
 .banner-container{
     padding: 50px 40px;
-    margin-top: 20px;
+    margin-top: 90px;
     // background-image: url("https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/12/07041130/Mengenal-Jenis-Jenis-Disabilitas-yang-Perlu-Dipahami.jpg.webp");
     background-repeat: no-repeat;
     background-size: cover;

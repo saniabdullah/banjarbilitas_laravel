@@ -134,6 +134,10 @@
     </div>
     @endforeach
 
+    <div class="mx-auto d-flex pagination pb-5 pt-3">
+        {{ $lowongans->links() }}
+    </div>
+
     @if(count($lowongans) <= 0)
         <div class='text-center text-3xl py-5'>Maap tidak ada lowongan</div>
     @endif
