@@ -46,7 +46,7 @@
                       </div>
                       <label
                           class="block text-sm font-medium text-gray-700 undefined"
-                      >Nama Pekerjaan</label>
+                      >NAMA PEKERJAAN</label>
                       <div class="flex flex-col items-start">
                             <input 
                                 type="text" 

@@ -31,4 +31,11 @@ Route::delete('admin/{id}', $controller_path . '\AdminController@delete_lowongan
 // cari lowongan
 Route::get('/cari-lowongan', $controller_path . '\CariLowonganController@index')->name('cari-lowongan-page');
 
+// registration
+Route::post('/register', $controller_path . '\RegisterController@add')->name('register');
+
+
+// login
+Route::post('/login', $controller_path . '\LoginController@authenticate')->name('login');
+
 

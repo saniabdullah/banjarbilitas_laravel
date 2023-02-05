@@ -24,9 +24,10 @@ body, * {
     }
 
     .main-container{
+      margin-top: 70px;
         max-width: 1400px; 
         padding-top: 20px;
-        margin: auto;
+        // margin: auto;
         width: 100%;
     }
     
@@ -592,7 +593,7 @@ body, * {
 // Banner
 .banner-container{
     padding: 50px 40px;
-    margin-top: 90px;
+    // margin-top: 90px;
     // background-image: url("https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/12/07041130/Mengenal-Jenis-Jenis-Disabilitas-yang-Perlu-Dipahami.jpg.webp");
     background-repeat: no-repeat;
     background-size: cover;
