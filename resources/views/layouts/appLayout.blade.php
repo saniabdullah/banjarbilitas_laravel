@@ -32,8 +32,12 @@
         <ul class="app__navbar-links">
             <li><a href="/cari-gawian">Cari Lowongan</a></li>
             <li><a href="#tips">Tips Karir</a></li>
-            <li class='rounded-full button__masuk' data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</li>
-            <li class='rounded-full button__daftar' data-bs-toggle="modal" data-bs-target="#registerModal">Daftar</li>
+            @auth
+                <li><a href="/profile">Welcome, {{ auth()->user()->nama_depan }}</a></li>
+            @else
+                <li class='rounded-full button__masuk' data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</li>
+                <li class='rounded-full button__daftar' data-bs-toggle="modal" data-bs-target="#registerModal">Daftar</li>
+            @endauth
         </ul>
     </nav>
 

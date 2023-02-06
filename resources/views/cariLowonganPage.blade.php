@@ -6,7 +6,8 @@
     <div class="flex flex-col items-center pt-6 sm:justify-center sm:pt-0">
       <div class="create pb-8 my-32 w-full px-6 py-4 bg-gray-50 shadow-md sm:rounded-lg">
           <h2>Pencarian Lanjutan</h2>
-          <form action="/cari-lowongan">
+          <form action="/cari-lowongan" method="post" enctype="multipart/form-data">
+            @csrf
               <div class='form__gawian'>
                   <div class='gawian__kategori'>
                       <label

@@ -17,8 +17,12 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
  
-            return redirect()->intended('pages-home');
+            return redirect()->intended('home')->with('success', 'Berhasil Masuk');
         }
+
+        return back()->withErrors([
+            'email' => 'Email Anda Belum Terdaftar Atau Password Anda Salah.',
+        ])->onlyInput('email');
 
     }
 }

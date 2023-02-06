@@ -13,37 +13,37 @@
 
     @error('nama_depan')
         <div class="alert alert-danger text-center">
-            {{ $message }}
+            <span class="text-2xl">GAGAL!!</span> <br> {{ $message }}
         </div>
     @enderror
 
     @error('nama_belakang')
         <div class="alert alert-danger text-center">
-            {{ $message }}
+            <span class="text-2xl">GAGAL!!</span> <br> {{ $message }}
         </div>
     @enderror
 
     @error('email')
         <div class="alert alert-danger text-center">
-            {{ $message }}
+            <span class="text-2xl">GAGAL!!</span> <br> {{ $message }}
         </div>
     @enderror
 
     @error('password')
         <div class="alert alert-danger text-center">
-            {{ $message }}
+            <span class="text-2xl">GAGAL!!</span> <br> {{ $message }}
         </div>
     @enderror
 
     @error('jenis_kelamin')
         <div class="alert alert-danger text-center">
-            {{ $message }}
+            <span class="text-2xl">GAGAL!!</span> <br> {{ $message }}
         </div>
     @enderror
 
     @error('tanggal_lahir')
         <div class="alert alert-danger text-center">
-            {{ $message }}
+            <span class="text-2xl">GAGAL!!</span> <br> {{ $message }}
         </div>
     @enderror
 
