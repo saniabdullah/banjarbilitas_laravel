@@ -40,6 +40,7 @@ Route::post('/login', $controller_path . '\LoginController@authenticate')->name(
 
 // profile
 Route::get('/profile', $controller_path . '\ProfileController@index')->name('profile-page');
+Route::put('/profile/{id}', $controller_path . '\ProfileController@update')->name('profile-page-update');
 
 
 

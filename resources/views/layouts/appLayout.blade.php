@@ -25,12 +25,12 @@
     <!-- navbar -->
     <nav class="app__navbar m-0 bg-slate-100">
         <div class="app__navbar-logo">
-            <a href="/">
-            <!-- <img src={images.banjarbilitas} alt="logo" /> -->
+            <a href="/home">
+            <img src="{{ asset('images/banjarbilitas1.png') }}" alt="logo" /> 
             </a>
         </div>
         <ul class="app__navbar-links">
-            <li><a href="/cari-gawian">Cari Lowongan</a></li>
+            <li><a href="/cari-lowongan">Cari Lowongan</a></li>
             <li><a href="#tips">Tips Karir</a></li>
             @auth
                 <li><a href="/profile">Welcome, {{ auth()->user()->nama_depan }}</a></li>

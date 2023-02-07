@@ -16,16 +16,10 @@ class ProfileController extends Controller
         return view('profile', $data);
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . auth()->id(),
-        ]);
-
-        $user = User::find(auth()->id());
-        $user->update($request->only(['name', 'email']));
-
-        return redirect()->route('profile.edit')->withSuccess('Profile updated successfully.');
+        $data = User::find($id);
+        $data->update($request->all());
+        return redirect()->route('profile-page')->with('success','Data Berhasil diupdate');
     }
 }
