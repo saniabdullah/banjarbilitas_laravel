@@ -51,7 +51,9 @@
             <p>2022 Banjarbilitas All rights reserverd</p>
             <p class="icons">
                 <!-- <i class="bi bi-facebook"></i> -->
-                <i class="bi bi-instagram"></i>
+                <a href="https://www.instagram.com/banjarbilitas/" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                </a>
             </p>
         </div>
     </div>

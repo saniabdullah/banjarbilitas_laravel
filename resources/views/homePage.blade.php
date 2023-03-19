@@ -115,7 +115,7 @@
 
         <div class="profile__content">
         <div class='profile__header'>
-            <h1>Buat <span class="text-white">PROFIL KERJABILITAS</span> dan raih peluangmu!</h1>      
+            <h1>Buat <span class="text-white">PROFIL BANJARBILITAS</span> dan raih peluangmu!</h1>      
         </div>  
         <div>
             <div class='profile__p pb-8'><i class="bi bi-envelope-at pr-4" style="width: 35px; height:35px;"></i>Selalu di depan dengan peluang kerja baru yang dikirim lewat email setiap hari</div>
